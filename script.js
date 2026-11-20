@@ -4,11 +4,11 @@ const taskList = document.getElementById("task-list");
 
 
 addButton.addEventListener("click", () => {
-    let userInput = taskinput.value.trim();
-    if (userInput === ""){
+    const newLine = document.createElement('p');
+    if (newLine === ""){
         alert("Input something :(")
     }else {
-        list.textContent = userInput;
+        list.textContent = newLine;
     }
 })
 
