@@ -1,0 +1,45 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    font-family: sans-serif;
+  }
+
+  /* 1. Hide default square checkbox and make a hollow circle */
+  .circle-bullet {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  /* 2. Fill circle when clicked */
+  .circle-bullet:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  /* 3. Draw the white tick mark inside when checked */
+  .circle-bullet:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  /* Optional: Strike through the text when checked */
+  .circle-bullet:checked + span {
+    text-decoration: line-through;
+    color: #888;
+  }

@@ -4,13 +4,18 @@ const taskList = document.getElementById("task-list-output");
 
 
 addButton.addEventListener("click", () => {
-    const newLine = document.createElement('p');
     if (taskinput.value.trim() === ""){
         alert("Input something :(")
-    }else {
-        newLine.textContent = taskinput.value;
-        taskList.appendChild(newLine);
-        taskinput.value = "";
     }
+
+    const newLine = document.createElement('p');
+    newLine.classList.add('todo-line')
+    const bullet = document.createElement('input');
+    bullet.type = 'checkbox';
+    bullet.classList.add('circle-bullet');
+    const textNode = document.createTextNode(input.value);
+    newLine.appendChild(bullet);
+    newLine.appendChild(textNode);
+    taskinput.value = "";
 })
 
