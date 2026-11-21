@@ -5,17 +5,19 @@ const taskList = document.getElementById("task-list-output");
 
 addButton.addEventListener("click", () => {
     if (taskinput.value.trim() === ""){
-        alert("Input something :(")
+        alert("Input something :(");
+        return;
     }
 
     const newLine = document.createElement('p');
-    newLine.classList.add('todo-line')
+    newLine.classList.add('todo-line');
     const bullet = document.createElement('input');
     bullet.type = 'checkbox';
     bullet.classList.add('circle-bullet');
-    const textNode = document.createTextNode(input.value);
+    const textNode = document.createTextNode(taskinput.value);
     newLine.appendChild(bullet);
     newLine.appendChild(textNode);
+    taskList.appendChild(newLine);
     taskinput.value = "";
 })
 

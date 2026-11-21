@@ -6,7 +6,6 @@
     font-family: sans-serif;
   }
 
-  /* 1. Hide default square checkbox and make a hollow circle */
   .circle-bullet {
     appearance: none;
     -webkit-appearance: none;
@@ -19,13 +18,11 @@
     flex-shrink: 0;
   }
 
-  /* 2. Fill circle when clicked */
   .circle-bullet:checked {
     background-color: #28a745;
     border-color: #28a745;
   }
 
-  /* 3. Draw the white tick mark inside when checked */
   .circle-bullet:checked::after {
     content: "";
     position: absolute;
@@ -38,7 +35,6 @@
     transform: rotate(45deg);
   }
 
-  /* Optional: Strike through the text when checked */
   .circle-bullet:checked + span {
     text-decoration: line-through;
     color: #888;
