@@ -2,6 +2,7 @@ const addButton = document.getElementById("add-task-btn");
 const taskinput = document.getElementById("taskInput");
 const taskList = document.getElementById("task-list-output");
 
+taskList.innerHTML = localStorage.getItem("myTasks") || "";
 
 addButton.addEventListener("click", () => {
     if (taskinput.value.trim() === ""){
