@@ -10,14 +10,23 @@ addButton.addEventListener("click", () => {
     }
 
     const newLine = document.createElement('p');
-    newLine.classList.add('todo-line');
+    newLine.classList.add('todo-line'); 
     const bullet = document.createElement('input');
     bullet.type = 'checkbox';
     bullet.classList.add('circle-bullet');
+
+
+    bullet.addEventListener('change', () => {
+        newLine.classList.toggle("completed");
+    });
+
     const textNode = document.createTextNode(taskinput.value);
+
+
     newLine.appendChild(bullet);
     newLine.appendChild(textNode);
     taskList.appendChild(newLine);
+    localStorage.setItem("myTasks", taskList.innerHTML);
     taskinput.value = "";
 })
 

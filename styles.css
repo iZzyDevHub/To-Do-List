@@ -1,4 +1,4 @@
-.todo-item {
+.todo-line {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -35,7 +35,7 @@
     transform: rotate(45deg);
   }
 
-  .circle-bullet:checked + span {
+.todo-line.completed {
     text-decoration: line-through;
     color: #888;
-  }
+}
