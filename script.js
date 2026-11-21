@@ -4,6 +4,8 @@ const taskList = document.getElementById("task-list-output");
 
 taskList.innerHTML = localStorage.getItem("myTasks") || "";
 
+taskList.querySelectorAll
+
 addButton.addEventListener("click", () => {
     if (taskinput.value.trim() === ""){
         alert("Input something :(");
@@ -17,8 +19,11 @@ addButton.addEventListener("click", () => {
     bullet.classList.add('circle-bullet');
 
 
+
     bullet.addEventListener('change', () => {
         newLine.classList.toggle("completed");
+        bullet.toggleAttribute("checked");
+        localStorage.setItem("myTasks", taskList.innerHTML);
     });
 
     const textNode = document.createTextNode(taskinput.value);
