@@ -4,7 +4,13 @@ const taskList = document.getElementById("task-list-output");
 
 taskList.innerHTML = localStorage.getItem("myTasks") || "";
 
-taskList.querySelectorAll
+taskList.querySelectorAll(".circle-bullet").forEach(bullet => {
+    bullet.addEventListener('change', () => {
+        bullet.parentElement.classList.toggle("completed");
+        bullet.toggleAttribute("checked");
+        localStorage.setItem("myTasks", taskList.innerHTML);
+    })
+})
 
 addButton.addEventListener("click", () => {
     if (taskinput.value.trim() === ""){
