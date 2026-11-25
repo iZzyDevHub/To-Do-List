@@ -15,7 +15,7 @@ taskList.querySelectorAll(".circle-bullet").forEach(bullet => {
 addButton.addEventListener("click", () => {
     if (taskinput.value.trim() === ""){
         alert("Input something :(");
-        return;sdsd
+        return;
     }
 
     const newLine = document.createElement('p');
