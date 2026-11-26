@@ -1,12 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top, #181c26, #0b0d12);
+    color: #f3f4f6;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+#title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+#input-place {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#taskInput:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 12px rgba(40, 167, 69, 0.25);
+}
+
+#add-task-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#add-task-btn:hover {
+    background: #218838;
+}
+
+#add-task-btn:active {
+    transform: scale(0.97);
+}
+
+#list {
+    display: none;
+}
+
 .todo-line {
     display: flex;
     align-items: center;
     gap: 10px;
     margin: 8px 0;
     font-family: sans-serif;
-  }
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 14px;
+    border-radius: 10px;
+}
 
-  .circle-bullet {
+.circle-bullet {
     appearance: none;
     -webkit-appearance: none;
     width: 20px;
@@ -16,14 +90,14 @@
     cursor: pointer;
     position: relative;
     flex-shrink: 0;
-  }
+}
 
-  .circle-bullet:checked {
+.circle-bullet:checked {
     background-color: #28a745;
     border-color: #28a745;
-  }
+}
 
-  .circle-bullet:checked::after {
+.circle-bullet:checked::after {
     content: "";
     position: absolute;
     left: 5px;
@@ -33,9 +107,26 @@
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
-  }
+}
 
 .todo-line.completed span {
     text-decoration: line-through;
     color: #888;
+}
+
+.delete-btn {
+    margin-left: auto;
+    background: rgba(220, 53, 69, 0.15);
+    color: #ff6b6b;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.delete-btn:hover {
+    background: #dc3545;
+    color: #ffffff;
 }

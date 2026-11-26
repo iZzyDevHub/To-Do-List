@@ -55,3 +55,8 @@ taskList.addEventListener('click', (event) => {
     }
 })
 
+taskinput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        addButton.click();
+    }
+})
