@@ -23,6 +23,8 @@ addButton.addEventListener("click", () => {
     const bullet = document.createElement('input');
     bullet.type = 'checkbox';
     bullet.classList.add('circle-bullet');
+    const delebtn = document.createElement('button');
+    delebtn.textContent = 'Delete';
 
 
 
