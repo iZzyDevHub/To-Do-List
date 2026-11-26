@@ -25,6 +25,8 @@ addButton.addEventListener("click", () => {
     bullet.classList.add('circle-bullet');
     const delebtn = document.createElement('button');
     delebtn.textContent = 'Delete';
+    delebtn.classList.add('delete-btn');
+
 
 
 
@@ -39,8 +41,16 @@ addButton.addEventListener("click", () => {
 
     newLine.appendChild(bullet);
     newLine.appendChild(textNode);
+    newLine.appendChild(delebtn);
     taskList.appendChild(newLine);
     localStorage.setItem("myTasks", taskList.innerHTML);
     taskinput.value = "";
+})
+
+taskList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('delete-btn')){
+        event.target.parentElement.remove();
+        localStorage.setItem("myTasks", taskList.innerHTML);
+    }
 })
 
