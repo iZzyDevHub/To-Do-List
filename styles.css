@@ -35,8 +35,7 @@
     transform: rotate(45deg);
   }
 
-.todo-line.completed {
+.todo-line.completed span {
     text-decoration: line-through;
     color: #888;
 }
-

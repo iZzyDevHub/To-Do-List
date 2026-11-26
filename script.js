@@ -24,7 +24,7 @@ addButton.addEventListener("click", () => {
     bullet.type = 'checkbox';
     bullet.classList.add('circle-bullet');
     const delebtn = document.createElement('button');
-    delebtn.textContent = 'Delete';
+    delebtn.textContent = "Delete";
     delebtn.classList.add('delete-btn');
 
 
@@ -36,11 +36,12 @@ addButton.addEventListener("click", () => {
         localStorage.setItem("myTasks", taskList.innerHTML);
     });
 
-    const textNode = document.createTextNode(taskinput.value);
+    const taskText = document.createElement('span');
+    taskText.textContent = taskinput.value;
 
 
     newLine.appendChild(bullet);
-    newLine.appendChild(textNode);
+    newLine.appendChild(taskText);
     newLine.appendChild(delebtn);
     taskList.appendChild(newLine);
     localStorage.setItem("myTasks", taskList.innerHTML);
